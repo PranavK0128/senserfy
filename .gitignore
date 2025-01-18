@@ -42,4 +42,4 @@ next-env.d.ts
 
 
 # private api key info
-/backend/key.json
+backend/key.json
