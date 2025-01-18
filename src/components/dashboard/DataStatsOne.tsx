@@ -137,6 +137,11 @@ const DataStatsOne: React.FC<dataStats> = () => {
             key={index}
             className="rounded-[10px] bg-gray-700 p-6 shadow-1 dark:bg-gray-dark"
           >
+            {/* backdrop for each data card */}
+            {/* <div
+              key={index}
+              className="absolute rounded-[10px] bg-gray-700 opacity-70 pl-48 pt-36 shadow-1 dark:bg-gray-dark"
+            /> */}
             <div
               className="flex h-14.5 w-14.5 items-center justify-center rounded-full"
               style={{ backgroundColor: item.color }}
@@ -160,35 +165,40 @@ const DataStatsOne: React.FC<dataStats> = () => {
                 {item.growthRate}%
                 {item.growthRate > 0 ? (
                   <svg
-                    className="fill-current"
-                    width="10"
-                    height="10"
-                    viewBox="0 0 10 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  className="fill-current"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M4.35716 2.3925L0.908974 5.745L5.0443e-07 4.86125L5 -5.1656e-07L10 4.86125L9.09103 5.745L5.64284 2.3925L5.64284 10L4.35716 10L4.35716 2.3925Z"
-                      fill=""
+                      fill="#3FD97F"
                     />
                   </svg>
                 ) : (
                   <svg
-                    className="fill-current"
-                    width="10"
-                    height="10"
-                    viewBox="0 0 10 10"
+                  className="fill-current"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M5.64284 7.6075L9.09102 4.255L10 5.13875L5 10L-8.98488e-07 5.13875L0.908973 4.255L4.35716 7.6075L4.35716 7.6183e-07L5.64284 9.86625e-07L5.64284 7.6075Z"
-                      fill=""
+                      fill="#d93f3f"
                     />
                   </svg>
                 )}
               </span>
             </div>
+            <div
+              key={index}
+              className="-z-10 absolute rounded-[10px] bg-gray-700 opacity-70 pl-48 pb-36 shadow-1 dark:bg-gray-dark -mt-24"
+            />
+
           </div>
         ))}
       </div>
