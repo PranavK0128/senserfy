@@ -1,7 +1,5 @@
 import React from "react";
 
-// import { dataStats } from "@/types/dataStats";
-
 export type dataStats = {
     icon?: string;
     color?: string;
@@ -131,11 +129,12 @@ const dataStatsList = [
 
 const DataStatsOne: React.FC<dataStats> = () => {
   return (
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
+    <div className="flex flex-col "> 
+      <div className="flex gap-4 md:gap-6 xl:grid-cols-4 2xl:gap-7.5 bg-gray-700 bg-opacity-40 rounded-[10px] pt-4 pb-4 pr-4 pl-4 z-10 relative">
         {dataStatsList.map((item, index) => (
           <div
             key={index}
-            className="rounded-[10px] bg-gray-700 p-6 shadow-1 dark:bg-gray-dark"
+            className="rounded-[10px] bg-gray-700 p-6 shadow-1 dark:bg-gray-dark hover:scale-105 transition-all hover:shadow"
           >
             {/* backdrop for each data card */}
             {/* <div
@@ -194,14 +193,16 @@ const DataStatsOne: React.FC<dataStats> = () => {
                 )}
               </span>
             </div>
-            <div
+            {/* <div
               key={index}
               className="-z-10 absolute rounded-[10px] bg-gray-700 opacity-70 pl-48 pb-36 shadow-1 dark:bg-gray-dark -mt-24"
-            />
+            /> */}
 
           </div>
         ))}
       </div>
+    </div>
+
   );
 };
 
